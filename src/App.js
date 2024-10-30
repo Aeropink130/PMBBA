@@ -1,3 +1,4 @@
+import { useTheme } from "@mui/material/styles";
 import React, { useState } from "react";
 import {
   AppBar,
@@ -16,10 +17,9 @@ import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import HomeIcon from "@mui/icons-material/Home";
-import ImageNotSupportedIcon from "@mui/icons-material/ImageNotSupported";
 import FastfoodIcon from "@mui/icons-material/Fastfood";
 
-const MAX_DESCRIPTION_LENGTH = 100;
+const MAX_DESCRIPTION_LENGTH = 50;
 
 const menuData = {
   Inicio: [],
@@ -250,6 +250,7 @@ const menuData = {
 };
 
 function App() {
+  const theme = useTheme();
   const [selectedCategory, setSelectedCategory] = React.useState(0);
   const [expandedDescription, setExpandedDescription] = useState({});
 
@@ -330,9 +331,33 @@ function App() {
                         marginBottom: 20,
                       }}
                     />
-                    {/* <Typography variant="h5" gutterBottom>
-                      ¡Bienvenido a Burritas Baja Avión!
-                    </Typography> */}
+
+                    {/* Horario de Servicio en un cuadro con esquinas redondeadas */}
+                    <Box
+                      sx={{
+                        padding: 2,
+                        borderRadius: 2,
+                        backgroundColor: theme.palette.background.paper, // Fondo acorde al tema
+                        boxShadow: 1,
+                        display: "inline-block",
+                        marginBottom: 2,
+                      }}>
+                      <Typography
+                        variant="h6"
+                        sx={{ fontSize: "1.25rem", fontWeight: "bold" }}>
+                        Horario de Servicio
+                      </Typography>
+                      <Typography variant="body1" sx={{ fontSize: "1.1rem" }}>
+                        Lunes a Domingo: 9:00 am - 9:00 pm
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="text.secondary"
+                        sx={{ fontSize: "1rem" }}>
+                        Servicio a Domicilio hasta las 6:00 am
+                      </Typography>
+                    </Box>
+
                     <Box sx={{ width: "100%", height: "300px", marginTop: 2 }}>
                       <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.9347415311368!2d-103.30488902403661!3d20.672233799927096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b17cdf93ab33%3A0xf7d6c4472896c8ff!2sC.%20Industria%202513%2C%20Jardines%20de%20Guadalupe%2C%2044740%20Guadalajara%2C%20Jal.!5e0!3m2!1ses!2smx!4v1730310948848!5m2!1ses!2smx"
@@ -343,6 +368,20 @@ function App() {
                         loading="lazy"
                         title="Ubicación en Google Maps"></iframe>
                     </Box>
+
+                    {/* Información de la dirección */}
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        marginTop: 2,
+                        fontSize: "1rem",
+                        color: "text.secondary",
+                      }}>
+                      Estamos a sus órdenes en el mercado Felipe Ángeles, calle
+                      Industria 2513, cruce con Huertas y Guelatao, Guadalajara,
+                      Jalisco.
+                    </Typography>
+
                     {/* Botones de Redes Sociales */}
                     <Box
                       sx={{
@@ -367,7 +406,7 @@ function App() {
                       <Button
                         variant="contained"
                         color="success"
-                        href="https://api.whatsapp.com/send?phone=5213314701601&text=Enlace%3A%0Ahttps%3A%2F%2Ffb.me%2F8dF1KxgLB%0A%0A%C2%A1Hola%21+Podr%C3%ADas+darme+m%C3%A1s+informaci%C3%B3n+de...&source_url=https%3A%2F%2Ffb.me%2F8dF1KxgLB&icebreaker=%C2%A1Hola%21+Podr%C3%ADas+darme+m%C3%A1s+informaci%C3%B3n+de...&app=facebook&entry_point=post_cta&jid=5213314701601%40s.whatsapp.net&show_keyboard=1&show_ad_attribution=1&source=FB_Post&token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3MzAzOTcxMTIsInBob25lIjoiNTIxMzMxNDcwMTYwMSIsInRleHQiOiJFbmxhY2U6XG5odHRwczpcL1wvZmIubWVcLzhkRjFLeGdMQlxuXG5cdTAwYTFIb2xhISBQb2RyXHUwMGVkYXMgZGFybWUgbVx1MDBlMXMgaW5mb3JtYWNpXHUwMGYzbiBkZS4uLiIsInNvdXJjZV91cmwiOiJodHRwczpcL1wvZmIubWVcLzhkRjFLeGdMQiIsImljZWJyZWFrZXIiOiJcdTAwYTFIb2xhISBQb2RyXHUwMGVkYXMgZGFybWUgbVx1MDBlMXMgaW5mb3JtYWNpXHUwMGYzbiBkZS4uLiIsImFwcCI6ImZhY2Vib29rIiwiZW50cnlfcG9pbnQiOiJwb3N0X2N0YSIsImppZCI6IjUyMTMzMTQ3MDE2MDFcdTAwNDBzLndoYXRzYXBwLm5ldCIsInNob3dfa2V5Ym9hcmQiOjEsInNob3dfYWRfYXR0cmlidXRpb24iOjEsInNvdXJjZSI6IkZCX1Bvc3QiLCJzb3VyY2VfaWQiOiIxNDY2OTAxMTE3NTg0ODQ5IiwiY29udGV4dCI6IkFSQWVLZF9rRWNPN3IzMG1aeldQSjRneGFNQ3BBWFJHX0o3UVI3WTh3V1VMQnpWaXJUN3NiOEc0ZWxrLTJ2SnljVHRmWnk0UmZFODVONlNhVl9CTGlsaUtnT29CMERIZXhQZk81T21FTmkzdy1oak96VEE5bl9rLUJLZ2dnOWlfNS1acER0YWktMWJuOFNMSGxmMUpLbV91eDF3NEtfVURUM1huZXBUT3pwTjY0ekoxZUx0OG5iRTlsRzVIbWRYaHpmLUVwX0xQM3ZUTDd1T2pnTUoySTV4QWMydDVxRWpZcUdReEhHSE5HTUU4Nkp1YWZZSkowYU5felpaYWxIWFk2OXZvWUpuUW94aTdMR1hNUllMZzkybU1ZcmtJZ1k4QnlXTWQ5V1A5Tk5rbl9wazFuV1g4TlZOTE4wSTN2clZhZU5ueEhkdjRWZXFPZnlFZWdKTDNwY05BUnBHbU1RMXhxQTI3b1EifQ.QD5FtZdOONIOAlQqcVslKYcKpVpK8d3gd-TDT6I6Fk2OHNpwpYsfnvc-FmxFubSKwPnmuGcGlfmYp_yoNwlVAA&fbclid=IwY2xjawGPVBxleHRuA2FlbQIxMAABHfT6RrpX-jSFgUmKin3Qs6tKhA3lDspG4yr4sXhK61F6aapg7MOiAn_36g_aem_WSUzTVBW_5yiL9biipV-BA1"
+                        href="https://api.whatsapp.com/send?phone=5213314701601&text=Enlace%3A%0Ahttps%3A%2F%2Ffb.me%2F8dF1KxgLB%0A%0A%C2%A1Hola%21+Podr%C3%ADas+darme+m%C3%A1s+informaci%C3%B3n+de..."
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{
