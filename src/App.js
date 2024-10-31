@@ -28,21 +28,23 @@ const menuData = {
     {
       name: "Burrita tradicional",
       description: "Frijoles con pierna",
-      price: "$23",
-      img: "imagenes/burrita.jpg",
+      price: "$26",
+      img: "imagenes/burrita_tradicional.jpg",
     },
     { name: "Burrita de frijoles con queso", description: "", price: "$23" },
     {
       name: "Burro momia",
       description:
         "Jitomate, cebolla, crema, mostaza, catsup, queso blanco, salchicha y tocino",
-      price: "$38",
+      price: "$43",
+      img: "imagenes/burro_momia.jpg",
     },
     {
       name: "Burra Cris",
       description:
         "Doble tortilla, salchicha, pierna, queso blanco y amarillo, jamón, tocino, lechuga, jitomate, cebolla, crema, catsup y mostaza",
-      price: "$72",
+      price: "$78",
+      img: "imagenes/burrita_cris.jpg",
     },
     {
       name: "Burraneitor",
@@ -56,67 +58,81 @@ const menuData = {
       name: "Hamburguesa",
       description:
         "Carne, queso blanco, queso amarillo, jamón, tocino, jitomate, cebolla, lechuga, crema, catsup, mostaza",
-      price: "$58",
+      price: "$62",
       img: "imagenes/hamburguesa.jpg",
     },
     {
       name: "Hamburguesa especial",
       description:
         "Carne, jamón, queso blanco, queso amarillo, tocino, salchicha, jitomate, cebolla, lechuga, crema, catsup, mostaza",
-      price: "$68",
+      price: "$71",
+      img: "imagenes/hamburguesa_especial.jpg",
     },
     {
       name: "Hamburguesa doble",
       description:
         "Doble carne, doble jamón, doble queso blanco, doble queso amarillo, doble tocino, jitomate, cebolla, lechuga, crema, catsup, mostaza",
-      price: "$103",
+      price: "$110",
+      img: "imagenes/hamburguesa_doble.jpg",
     },
     {
       name: "Hamburguesa cubana",
       description:
         "Carne, queso blanco, queso amarillo, jamón, salchicha, pierna, chorizo, jitomate, cebolla, lechuga, crema, catsup, mostaza",
-      price: "$83",
+      price: "$90",
+      img: "imagenes/hamburguesa_cubana.jpg",
     },
     {
       name: "Hamburguesa doble cubana",
       description:
         "Doble carne, doble jamón, doble queso blanco, doble queso amarillo, doble tocino, doble pierna, doble salchicha, doble chorizo, jitomate, cebolla, lechuga, crema, catsup, mostaza",
-      price: "$153",
+      price: "$158",
+      img: "imagenes/hamburguesa_doble_cubana.jpg",
     },
   ],
   HotDogs: [
-    { name: "Hot dog", description: "", price: "$23" },
+    {
+      name: "Hot dog",
+      description: "",
+      price: "$25",
+      img: "imagenes/hotdog.jpg",
+    },
     {
       name: "Pierna Dogo",
       description: "Dogo normal con pierna extra",
-      price: "$33",
-      img: "imagenes/hotdog.jpg",
+      price: "$40",
+      img: "imagenes/hotdog_pierna.jpg",
     },
     {
       name: "Huevo Dogo",
       description: "Dogo normal con huevo encima",
-      price: "$33",
+      price: "$36",
+      img: "imagenes/hotdog_huevo.jpg",
     },
     {
       name: "Chile Dogo",
       description:
         "Dogo normal con chile güero y doble tocino. El chile lleva dentro una salchicha",
-      price: "$33",
+      price: "$40",
+      img: "imagenes/hotdog_chile.jpg",
     },
     {
       name: "Chori Dogo",
       description: "Dogo normal con chorizo",
-      price: "$28",
+      price: "$31",
+      img: "imagenes/choridogos.jpg",
     },
     {
       name: "Dogo especial",
       description: "Dogo normal con jamón y queso gratinado extra",
-      price: "$33",
+      price: "$35",
+      img: "imagenes/hotdog_especial.jpg",
     },
     {
       name: "Dogo gratinado",
       description: "Dogo normal con queso gratinado extra",
-      price: "$28",
+      price: "$34",
+      img: "imagenes/hotdog_gratinado.jpg",
     },
     {
       name: "Dogo Pacheco",
@@ -128,18 +144,26 @@ const menuData = {
     {
       name: "Molletes dulces",
       description: "Cajeta, fresa, miel lechera",
-      price: "$19",
+      price: "$22",
+      img: "imagenes/mollete_dulce.jpg",
     },
-    { name: "Mollete ranchero", description: "Frijoles y queso", price: "$28" },
+    {
+      name: "Mollete ranchero",
+      description: "Frijoles y queso",
+      price: "$30",
+      img: "imagenes/mollete_ranchero.jpg",
+    },
     {
       name: "Mollete ranchero estilo Paúl",
       description: "Frijoles, queso, jamón y tocino",
-      price: "$33",
+      price: "$40",
+      img: "imagenes/mollete_ranchero_paul.jpg",
     },
     {
       name: "Mollete ranchero estilo García",
       description: "Frijoles, queso, huevo y tocino",
-      price: "$38",
+      price: "$40",
+      img: "imagenes/mollete_ranchero_garcia.jpg",
     },
   ],
   Platillos: [
@@ -147,26 +171,79 @@ const menuData = {
   ],
   Postres: [
     { name: "Arroz con leche", description: "", price: "$17" },
-    { name: "Hot cakes", description: "", price: "$20" },
-    { name: "Hot cakes con fruta", description: "", price: "$43" },
+    {
+      name: "Panqueque",
+      description: "",
+      price: "$25",
+      img: "imagenes/panqueque.jpg",
+    },
+    {
+      name: "Panqueque con fruta",
+      description: "",
+      price: "$50",
+      img: "imagenes/panqueque_con_fruta.jpg",
+    },
     { name: "Pay", description: "", price: "$21" },
-    { name: "Galletas", description: "", price: "$21" },
-    { name: "Concha con fruta", description: "", price: "$33" },
+    {
+      name: "Galletas",
+      description: "",
+      price: "$25 / $30",
+      img: "imagenes/galletas.jpg",
+    },
+    {
+      name: "Concha con fruta",
+      description: "",
+      price: "$36",
+      img: "imagenes/concha_con_fruta.jpg",
+    },
+    {
+      name: "Pan dulce",
+      description: "",
+      price: "$14",
+      img: "imagenes/pan.jpg",
+    },
   ],
   Quesadillas: [
-    { name: "Quesadilla", description: "", price: "$18" },
+    {
+      name: "Quesadilla",
+      description: "",
+      price: "$20",
+      img: "imagenes/quesadilla.jpg",
+    },
+    {
+      name: "Quesadilla con chorizo",
+      description: "",
+      price: "$30",
+      img: "imagenes/quesadilla_chorizo.jpg",
+    },
     { name: "Quesadilla con jamón", description: "", price: "$23" },
-    { name: "Quesadilla con bistec", description: "", price: "$36" },
+    {
+      name: "Quesadilla con bistec",
+      description: "",
+      price: "$38",
+      img: "imagenes/quesadilla_bistec.jpg",
+    },
     {
       name: "Sincronizada",
       description:
         "Jamón, queso blanco, queso amarillo, jitomate, cebolla, lechuga, crema, catsup y mostaza",
-      price: "$43",
+      price: "$48",
+      img: "imagenes/sincronizada.jpg",
     },
   ],
   Tacos: [
-    { name: "Taco de bisteck", description: "", price: "0" },
-    { name: "Taco de chorizo", description: "", price: "0" },
+    {
+      name: "Taco de bisteck",
+      description: "",
+      price: "$15",
+      img: "imagenes/tacos_bistec_chorizo.jpg",
+    },
+    {
+      name: "Taco de chorizo",
+      description: "",
+      price: "$15",
+      img: "imagenes/tacos_bistec_chorizo.jpg",
+    },
   ],
   Bebidas: [
     { name: "Café negro chico", description: "", price: "$15" },
@@ -174,8 +251,24 @@ const menuData = {
     { name: "Canela chica o té", description: "", price: "$15" },
     { name: "Café con leche chico", description: "", price: "$17" },
     { name: "Café con leche mediano", description: "", price: "$20" },
-    { name: "Chocolate chico", description: "", price: "$17" },
-    { name: "Chocolate mediano", description: "", price: "$20" },
+    {
+      name: "Chocolate caliente chico",
+      description: "",
+      price: "$21",
+      img: "imagenes/chocolate_caliente.jpg",
+    },
+    {
+      name: "Chocolate caliente mediano",
+      description: "Medio litro",
+      price: "$26",
+      img: "imagenes/chocolate_caliente.jpg",
+    },
+    {
+      name: "Chocolate caliente grande",
+      description: "1 litro",
+      price: "52",
+      img: "imagenes/chocolate_caliente.jpg",
+    },
     { name: "Avena con leche chica", description: "", price: "$17" },
     { name: "Avena con leche mediana", description: "", price: "$20" },
     { name: "Arroz con leche chico", description: "", price: "$17" },
@@ -183,7 +276,8 @@ const menuData = {
     {
       name: "Chocomilk",
       description: "Fresa, vainilla o chocolate",
-      price: "$23",
+      price: "$25",
+      img: "imagenes/chocomilk.jpg",
     },
     { name: "Chocomil de litro", description: "", price: "$46" },
     {
@@ -192,8 +286,18 @@ const menuData = {
       price: "$28",
     },
     { name: "Licuado con avena", description: "", price: "$33" },
-    { name: "Frappuccino", description: "", price: "$28" },
-    { name: "Frappuccino de cajeta", description: "", price: "$34" },
+    {
+      name: "Frappuccino",
+      description: "",
+      price: "$38",
+      img: "imagenes/frappuccino.jpg",
+    },
+    {
+      name: "Frappuccino de cajeta",
+      description: "",
+      price: "$45",
+      img: "imagenes/frappuccino_cajeta.jpg",
+    },
     { name: "Refresco", description: "", price: "$21" },
     { name: "Jugo Jumex", description: "", price: "$20" },
     { name: "Gatorade", description: "", price: "$28" },
@@ -210,28 +314,71 @@ const menuData = {
     { name: "Extra de bistec", description: "", price: "$18" },
     { name: "Extra de pierna", description: "", price: "$12" },
     { name: "Palomitas", description: "", price: "$15" },
-    { name: "Papas a la francesa", description: "", price: "$22" },
+    {
+      name: "Papas a la francesa",
+      description: "",
+      price: "$25",
+      img: "imagenes/papas_francesa.jpg",
+    },
     { name: "Orden de salchipulpos", description: "", price: "$51" },
     { name: "Huevos cocidos", description: "Precio por unidad", price: "$7" },
     {
       name: "Ensalada",
       description: "Panela, jamón de pavo, lechuga, cebolla, jitomate",
-      price: "$31",
+      price: "$48",
+      img: "imagenes/ensalada.jpg",
     },
     { name: "Kakes de avena y proteína", description: "", price: "$46" },
-    { name: "Salchitaco", description: "", price: "$16" },
+    {
+      name: "Salchitaco",
+      description: "",
+      price: "$18",
+      img: "imagenes/salchitaco.jpg",
+    },
+    {
+      name: "Chile con queso",
+      description: "",
+      price: "$30",
+      img: "imagenes/chile_con_queso.jpg",
+    },
   ],
   Sandwich: [
-    { name: "De pierna", description: "", price: "$28" },
-    { name: "De jamón", description: "", price: "$21" },
+    {
+      name: "De pierna",
+      description: "",
+      price: "$31",
+      img: "imagenes/emparedado_pierna.jpg",
+    },
+    {
+      name: "De jamón",
+      description: "",
+      price: "$22",
+      img: "imagenes/emparedado_jamon.jpg",
+    },
     { name: "De panela", description: "", price: "$21" },
     { name: "De frijoles con queso", description: "", price: "$21" },
     { name: "De huevo con jamón", description: "", price: "$21" },
+    {
+      name: "Cuernito con jamón",
+      description: "",
+      price: "$35",
+      img: "imagenes/cuernito_jamon.jpg",
+    },
   ],
   Lonches: [
-    { name: "Lonche de pierna", description: "", price: "$53" },
+    {
+      name: "Lonche de pierna",
+      description: "",
+      price: "$56",
+      img: "imagenes/lonche_pierna.jpg",
+    },
     { name: "Lonche de huevo", description: "", price: "$43" },
-    { name: "Lonche de huevo con jamón", description: "", price: "$48" },
+    {
+      name: "Lonche de huevo con jamón",
+      description: "",
+      price: "$48",
+      img: "imagenes/lonche_huevo_jamon.jpg",
+    },
     { name: "Lonche de frijoles con queso", description: "", price: "$43" },
     { name: "Lonche de jamón", description: "", price: "$43" },
     { name: "Lonche de panela", description: "", price: "$43" },
@@ -244,7 +391,8 @@ const menuData = {
       name: "Lonche Tetas",
       description:
         "Pierna, jamón, panela, queso blanco, queso amarillo, salchicha, tocino, jitomate, cebolla, lechuga, crema, catsup y mostaza",
-      price: "$103",
+      price: "$106",
+      img: "imagenes/lonche_tetas.jpg",
     },
   ],
 };
@@ -273,9 +421,22 @@ function App() {
     <Box sx={{ flexGrow: 1, paddingBottom: 4 }}>
       {/* Header */}
       <AppBar position="sticky">
-        <Toolbar>
-          <RestaurantMenuIcon sx={{ marginRight: 1 }} />
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        <Toolbar
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}>
+          <img
+            src="/imagenes/logo.png"
+            alt="Logo del Restaurante"
+            style={{
+              width: 24, // Tamaño del ancho, similar al tamaño de un ícono
+              height: 24, // Tamaño del alto, similar al tamaño de un ícono
+              marginRight: 8, // Espacio entre el logo y el texto
+            }}
+          />
+          <Typography variant="h6" component="div">
             Burritas Baja Avión
           </Typography>
         </Toolbar>
@@ -323,7 +484,7 @@ function App() {
                 {category === "Inicio" ? (
                   <Box textAlign="center">
                     <img
-                      src="/imagenes/inicio.jpg"
+                      src="/imagenes/bajando_avion.png"
                       alt="Logo del Restaurante"
                       style={{
                         maxWidth: "100%",
@@ -350,11 +511,14 @@ function App() {
                       <Typography variant="body1" sx={{ fontSize: "1.1rem" }}>
                         Lunes a Domingo: 9:00 am - 9:00 pm
                       </Typography>
+                      <Typography variant="body2" sx={{ fontSize: "1.1rem" }}>
+                        Descansamos los Martes
+                      </Typography>
                       <Typography
                         variant="body2"
                         color="text.secondary"
                         sx={{ fontSize: "1rem" }}>
-                        Servicio a Domicilio hasta las 6:00 am
+                        Servicio a Domicilio termina a las 6:00 am
                       </Typography>
                     </Box>
 

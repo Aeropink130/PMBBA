@@ -28,6 +28,9 @@ const theme = createTheme({
     body1: {
       color: "#D3D3D3",
     },
+    body2: {
+      color: "#FF4500",
+    },
     button: {
       color: "#FFFFFF",
     },
